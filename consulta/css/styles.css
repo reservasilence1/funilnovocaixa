@@ -126,7 +126,7 @@ body {
   height: 40px;
   background-color: #f7941c;
   border-radius: 50%;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   color: #1a5e9c;
