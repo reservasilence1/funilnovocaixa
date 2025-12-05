@@ -210,7 +210,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // ✅ Redireciona mantendo parâmetros UTM
     const urlParams = new URLSearchParams(window.location.search);
-    const redirectUrl = 'page-05' + (urlParams.toString() ? '?' + urlParams.toString() : '');
+    const redirectUrl = '/consulta/page-05' + (urlParams.toString() ? '?' + urlParams.toString() : '');
     window.location.href = redirectUrl;
   });
 
