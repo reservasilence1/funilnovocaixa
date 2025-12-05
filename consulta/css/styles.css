@@ -254,6 +254,7 @@ body {
 .benefits-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
 }
 
 .benefit-card {
@@ -290,7 +291,7 @@ body {
 
 /* Stats section */
 .stats {
-  padding: 60px 0;
+  padding: 20px 0;
   background-color: #f9fafb;
 }
 
