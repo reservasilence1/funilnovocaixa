@@ -151,7 +151,7 @@ body {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 300px;
-  border: 2px solid #ac0a2a;
+  border: 2px margim solid #ac0a2a;
 }
 
 .form-title {
@@ -171,6 +171,7 @@ body {
 
 .form-group {
   margin-bottom: 20px;
+  margim-top: 10px;
 }
 
 .form-input {
