@@ -233,7 +233,7 @@ body {
 .section-title {
   font-size: 2rem;
   font-weight: 700;
-  color: #1a5e9c;
+  color: #ac0a2a;
   text-align: center;
   margin-bottom: 10px;
 }
@@ -272,14 +272,14 @@ body {
 }
 
 .benefit-title {
-  color:#1a5e9c;
+  color:#ac0a2a;
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 10px;
 }
 
 .benefit-title-highlight {
-  color: #1a5e9c;
+  color: #ac0a2a;
 }
 
 .benefit-text {
@@ -316,7 +316,7 @@ body {
 .stat-number {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #f7941c;
+  color: #ac0a2a;
   margin-bottom: 5px;
 }
 
@@ -326,7 +326,7 @@ body {
 
 /* Footer */
 .footer {
-  background-color: #1a5e9c;
+  background-color: #ac0a2a;
   color: white;
   padding: 60px 0 30px;
 }
@@ -399,7 +399,7 @@ body {
 }
 
 .footer-link a:hover {
-  color: #1a5e9c;
+  color: #ac0a2a;
 }
 
 .footer-bottom {
