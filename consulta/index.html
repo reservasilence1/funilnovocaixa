@@ -22,12 +22,89 @@
       display: block;
       height: auto;
     }
-    </style>
+
+    /* -------- CARROSSEL DA SESSÃO "CONFIE..." -------- */
+    .stats-carousel-wrapper {
+      position: relative;
+      max-width: 900px;
+      margin: 24px auto 0;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 12px;
+      background: #ffffff;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+    }
+
+    .stats-carousel {
+      display: flex;
+      transition: transform 0.4s ease;
+    }
+
+    .stats-slide {
+      flex: 0 0 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .stats-slide img {
+      width: 100%;
+      height: auto;
+      max-height: 360px;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .stats-carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #ffffff;
+      border-radius: 999px;
+      border: 1px solid #e5e7eb;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 20px;
+      color: #111827;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+    }
+
+    .stats-carousel-btn.prev {
+      left: 10px;
+    }
+
+    .stats-carousel-btn.next {
+      right: 10px;
+    }
+
+    .stats-carousel-btn:hover {
+      background: #f9fafb;
+    }
+
+    @media (max-width: 640px) {
+      .stats-carousel-wrapper {
+        margin-top: 16px;
+        padding: 8px;
+      }
+
+      .stats-carousel-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 18px;
+      }
+    }
+  </style>
 
 </head><body>
     
     
-    <script>
+<script>
   window.pixelId = "6927e90b843a260eef2a0e49";
   var a = document.createElement("script");
   a.setAttribute("async", "");
@@ -251,26 +328,22 @@ document.addEventListener("DOMContentLoaded", function () {
         <h2 class="section-title">Confie na maior cooperativa do Brasil</h2>
         <p class="section-subtitle">Mais de 30 anos cuidando do seu futuro financeiro</p>
 
-        <div class="stats-grid">
-          <div class="stat-item">
-            <div class="stat-number">+5Mi</div>
-            <div class="stat-label">Cooperados</div>
+        <!-- CARROSSEL DE IMAGENS CENTRALIZADO -->
+        <div class="stats-carousel-wrapper">
+          <button class="stats-carousel-btn prev" type="button">‹</button>
+          <div class="stats-carousel">
+            <!-- Troque os arquivos abaixo pelas imagens que você subir em /consulta/images/ -->
+            <div class="stats-slide">
+              <img src="/consulta/images/carrossel-1.png" alt="Bradesco - imagem 1">
+            </div>
+            <div class="stats-slide">
+              <img src="/consulta/images/carrossel-2.png" alt="Bradesco - imagem 2">
+            </div>
+            <div class="stats-slide">
+              <img src="/consulta/images/carrossel-3.png" alt="Bradesco - imagem 3">
+            </div>
           </div>
-
-          <div class="stat-item">
-            <div class="stat-number">30+</div>
-            <div class="stat-label">Anos de mercado</div>
-          </div>
-
-          <div class="stat-item">
-            <div class="stat-number">1000+</div>
-            <div class="stat-label">Agências</div>
-          </div>
-
-          <div class="stat-item">
-            <div class="stat-number">98%</div>
-            <div class="stat-label">Satisfação</div>
-          </div>
+          <button class="stats-carousel-btn next" type="button">›</button>
         </div>
       </div>
     </div>
@@ -372,5 +445,42 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   </script>
 
+  <!-- JS DO CARROSSEL -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const track = document.querySelector('.stats-carousel');
+      const slides = document.querySelectorAll('.stats-slide');
+      const prevBtn = document.querySelector('.stats-carousel-btn.prev');
+      const nextBtn = document.querySelector('.stats-carousel-btn.next');
+
+      if (!track || slides.length === 0) return;
+
+      let index = 0;
+
+      function updateCarousel() {
+        track.style.transform = `translateX(-${index * 100}%)`;
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', function () {
+          index = (index - 1 + slides.length) % slides.length;
+          updateCarousel();
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', function () {
+          index = (index + 1) % slides.length;
+          updateCarousel();
+        });
+      }
+
+      // Auto-slide opcional
+      setInterval(function () {
+        index = (index + 1) % slides.length;
+        updateCarousel();
+      }, 5000);
+    });
+  </script>
 
 </body></html>
