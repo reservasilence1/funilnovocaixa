@@ -145,7 +145,7 @@ body {
 .form-card {
   background-color: white;
   margim-top: 10px;
-  display: flex;
+  margim-left: 10px;
   border-radius: 12px;
   padding: 30px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
