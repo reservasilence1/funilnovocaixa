@@ -268,7 +268,7 @@ body {
 }
 
 .benefit-card-highlight {
-  border: 2px solid #ac0a2a;
+  border: 2px solid #9b145f;
 }
 
 .benefit-title {
@@ -316,7 +316,7 @@ body {
 .stat-number {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #ac0a2a;
+  color: #9b145f;
   margin-bottom: 5px;
 }
 
