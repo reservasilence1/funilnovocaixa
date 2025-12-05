@@ -9,6 +9,110 @@
   <meta charset="utf-8">
   <script src="js/latest.js" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids="" async="" defer=""></script>
 
+  <!-- ESTILOS DO BANNER NOVO -->
+  <style>
+    .loan-banner {
+      background: linear-gradient(135deg, #ff7b32 0%, #ffb347 100%);
+      color: #ffffff;
+      padding: 24px 0;
+    }
+
+    .loan-banner-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .loan-banner-left {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .loan-banner-photo {
+      max-width: 220px;
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      object-fit: cover;
+    }
+
+    .loan-banner-right {
+      flex: 1.2;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      font-family: "Inter", sans-serif;
+    }
+
+    .loan-banner-tag {
+      font-size: 1.1rem;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .loan-banner-value-box {
+      background: #111827;
+      border-radius: 16px;
+      padding: 10px 16px;
+      display: inline-flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .loan-banner-value-box span {
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .loan-banner-value-number {
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: #22c55e;
+    }
+
+    .loan-banner-approval {
+      margin-top: 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #ffffff;
+      color: #111827;
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .loan-banner-approval-icon {
+      font-size: 1.1rem;
+    }
+
+    .loan-banner-note {
+      font-size: 0.8rem;
+      opacity: 0.9;
+      margin-top: 4px;
+    }
+
+    @media (max-width: 768px) {
+      .loan-banner-container {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+
+      .loan-banner-right {
+        align-items: center;
+      }
+
+      .loan-banner-value-box,
+      .loan-banner-approval {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  </style>
 
 </head><body>
     
@@ -37,6 +141,32 @@
       <a href="#simular" class="btn btn-primary">Solicitar Empréstimo</a>
     </div>
   </header>
+
+  <!-- BANNER ESTILO INTER -->
+  <section class="loan-banner">
+    <div class="container loan-banner-container">
+      <div class="loan-banner-left">
+        <!-- Substitua a imagem abaixo pela foto que desejar -->
+        <img src="/consulta/images/banner.png" alt="Cliente Bradesco feliz" class="loan-banner-photo">
+      </div>
+
+      <div class="loan-banner-right">
+        <p class="loan-banner-tag">Empréstimo pessoal rápido e seguro</p>
+
+        <div class="loan-banner-value-box">
+          <span>Até</span>
+          <span class="loan-banner-value-number">30.000</span>
+        </div>
+
+        <div class="loan-banner-approval">
+          <span class="loan-banner-approval-icon">⚡</span>
+          Aprovação em até 24 horas*
+        </div>
+
+        <p class="loan-banner-note">*Sujeito à análise e às políticas de crédito do Bradesco.</p>
+      </div>
+    </div>
+  </section>
   
   <!-- Hero Section -->
   <section class="hero">
