@@ -57,12 +57,12 @@ body {
 }
 
 .btn-primary {
-  background-color: #f7941c;
+  background-color: #ac0a2a;
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: #f7941c;
+  background-color: #ac0a2a;
 }
 
 .btn-icon {
@@ -71,7 +71,7 @@ body {
 
 /* Hero section */
 .hero {
-  background: #1a5e9c;
+  background: #ac0a2a;
   color: white;
   padding: 60px 0;
   position: relative;
