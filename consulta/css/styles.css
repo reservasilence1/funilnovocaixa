@@ -258,7 +258,7 @@ body {
 }
 
 .benefit-card {
-  background-color: #ac0a2a;
+  background-color: white;
   border-radius: 12px;
   padding: 25px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -271,22 +271,22 @@ body {
 }
 
 .benefit-card-highlight {
-  border: 2px solid #fff;
+  border: 2px solid #ac0a2a;
 }
 
 .benefit-title {
-  color:#fff;
+  color:#ac0a2a;
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 10px;
 }
 
 .benefit-title-highlight {
-  color: #fff;
+  color: #ac0a2a;
 }
 
 .benefit-text {
-  color: #fff;
+  color: #6B7280;
 }
 
 /* Stats section */
